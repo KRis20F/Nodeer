@@ -17,6 +17,6 @@ router.get('/api/products/:productID', auth.authenticateKey, getProduct)
 router.post('/api/products', auth.authenticateKey, createProduct) 
 router.put('/api/products/:productID', auth.authenticateKey, updateProduct) 
 // router.delete('/:productID', deleteProduct)
-router.post('/users/register', createUser)
+router.post('/api/users/register', createUser)
 
 module.exports = router
