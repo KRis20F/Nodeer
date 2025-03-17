@@ -48,7 +48,15 @@ Product.update = async (product) => {
   return updateResult;
 };
 
-//TBD: Product.delete
+Product.delete = async (id) => {
+  await mongoClient.connect();
+  console.log('Connected successfully to database (MongoDB)');
+  const db = mongoClient.db('products');
+  const collection = db.collection('products');
+  const selector = {"id": parseInt(id)};
+  const deleteResult = await collection.deleteMany(selector);
+  return deleteResult;
+}
 
 module.exports = Product;
 
