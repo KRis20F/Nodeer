@@ -17,5 +17,5 @@ app.use("/", products_routes);
 //Server startup
 app.listen(5000, () => {
   const message = "server is listening on port 5000";
-  console.log(slugify(message, { replacement: '*' }));
+  console.log(slugify(message, { replacement: "*" }));
 });
